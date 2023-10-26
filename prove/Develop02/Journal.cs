@@ -4,24 +4,24 @@ using System.Collections.Generic;
 
 public class Journal
 {
+    public string file_name = $"{file_name1}";
+    static string file_name1;
+
+    public string return_file()
+    {
+        return file_name;
+    }
     
-    // public string file_to_load()
-    // {
-    //     Console.WriteLine("What file do you want to load? ");
-    //     string load_file = Console.ReadLine();
-    //     return load_file;
-
-    // }
-
     public void Write()
     {
         Prompts prompt = new Prompts();
         prompt.NewQuestion();
-
+        
     }
+
     public void display()
     {
-        string file = "Records.txt";
+        string file = file_name;
         string[] lines = System.IO.File.ReadAllLines(file);
 
         foreach (string line in lines)
@@ -31,11 +31,23 @@ public class Journal
             Console.WriteLine($"{line}");
         }
     }
-    public void load()
+    public string load()
     {
+        
         Console.WriteLine("What file do you want to load? ");
-        string load_file = Console.ReadLine();
-        string[] lines = System.IO.File.ReadAllLines(load_file);
+        file_name1 = Console.ReadLine();
+
+        return file_name1;
+        
+    }
+
+    public void load_file()
+    {
+        Journal file = new Journal();
+        file.load();
+
+
+        string[] lines = System.IO.File.ReadAllLines(file_name);
 
         foreach (string line in lines)
         {
@@ -43,7 +55,7 @@ public class Journal
 
             Console.WriteLine($"{line}");
         }
-        
+
     }
 
 }

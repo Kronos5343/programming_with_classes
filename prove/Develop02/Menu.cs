@@ -11,6 +11,7 @@ public class menu_system
         int Breakout_Answer = 0;
         while (Breakout_Answer != 5)
         {
+
             Console.WriteLine("Choose your option:\n1.Write\n2.Display\n3.Load\n4.Quit ");
             int answer = int.Parse(Console.ReadLine());
             

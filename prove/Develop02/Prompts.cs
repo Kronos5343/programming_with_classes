@@ -7,7 +7,6 @@ using System.Security.Cryptography.X509Certificates;
 
 public class Prompts
 {
-
     static string[] questions = new string[] 
     {
         "Who was the most interesting person I interacted with today?",
@@ -31,7 +30,7 @@ public class Prompts
         Console.WriteLine(questions[number]);
         string Written_Entry = Console.ReadLine();
 
-        string journal_entry = $"{dateText} {questions[number]}: {Written_Entry}";
+        string journal_entry = $"{dateText} {questions[number]}: {Written_Entry}~";
         
         List<string> entries_list = new List<string>();
         
@@ -40,7 +39,8 @@ public class Prompts
         string answer = Console.ReadLine();
         if (answer == "y")
         {
-            string file = "Records.txt";
+            Journal load_file = new Journal();
+            string file = load_file.return_file();
 
             using (StreamWriter txt = File.AppendText(file)){
                 txt.Write($"{entries_list[0]}\n");
