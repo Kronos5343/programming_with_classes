@@ -13,14 +13,16 @@ class MenuClass
 
             if (response == "1")
             {
-                
+                Console.WriteLine("What account would you like to load? ");
+                string LoadAcc = Console.ReadLine();
+                menu2(LoadAcc);
             }
 
             else if (response == "2")
             {
-                Console.WriteLine("What account would you like to load? ");
-                int LoadAcc = int.Parse(Console.ReadLine());
-                menu2(LoadAcc);
+                Console.WriteLine("What is the new account name? ");
+                string CreateAcc = Console.ReadLine();
+                menu2(CreateAcc);
             }
 
             else if (response == "3")
@@ -40,7 +42,7 @@ class MenuClass
 
     }
 
-    public void menu2(int LoadAcc)
+    public void menu2(string input)
     {
         string answer = "0";
         while (answer != "6")
