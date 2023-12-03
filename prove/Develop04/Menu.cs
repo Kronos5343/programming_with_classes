@@ -45,15 +45,4 @@ class Menu_system
 
 
     }
-
-    public void display()
-    {
-        
-
-
-
-
-
-        
-    }
 }

@@ -1,9 +1,11 @@
 using System;
+using System.ComponentModel.Design;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello FinalProject World!");
+        MenuClass call = new MenuClass();
+        call.menu1();
     }
 }
