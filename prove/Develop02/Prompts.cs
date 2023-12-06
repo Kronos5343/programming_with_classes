@@ -30,7 +30,7 @@ public class Prompts
         Console.WriteLine(questions[number]);
         string Written_Entry = Console.ReadLine();
 
-        string journal_entry = $"{dateText} {questions[number]}: {Written_Entry}~";
+        string journal_entry = $"{dateText}* {questions[number]}: {Written_Entry}~";
         
         List<string> entries_list = new List<string>();
         

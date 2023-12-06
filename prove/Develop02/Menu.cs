@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 public class menu_system
 {
+    Journal journal = new Journal();
     public void Display()
     {
         int Breakout_Answer = 0;
@@ -18,19 +19,15 @@ public class menu_system
 
             if (answer == 1)
             {
-                Journal entry = new Journal();
-                entry.Write();
-
+                journal.Write();
             }
             else if (answer == 2)
             {
-                Journal entry = new Journal();
-                entry.display();
+                journal.display();
             }
             else if (answer == 3)
             {
-                Journal entry = new Journal();
-                entry.load();
+                journal.load();
             }
             else
             {
