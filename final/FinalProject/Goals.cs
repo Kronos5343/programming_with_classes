@@ -3,6 +3,7 @@ using System.Formats.Asn1;
 
 class Goals : Account
 {
+    
     public string goalName;
     public double moneyGoal;
     public double moneyEarned;

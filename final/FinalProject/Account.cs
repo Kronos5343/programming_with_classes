@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 
 class Account
 {
+    
     public string accountName;
     public string accountNumber;
     public double accountTotal;
